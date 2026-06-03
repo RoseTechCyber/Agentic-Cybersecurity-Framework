@@ -1,0 +1,152 @@
+{
+  "framework": "Framework Mappings",
+  "version": "1.0",
+  "description": "Cross-framework control mappings for compliance alignment",
+  "mappings": {
+    "ISO27001_to_CIS": {
+      "A.5.1.1": ["CIS-2.1", "CIS-1"],
+      "A.5.1.2": ["CIS-3.1"],
+      "A.6.1.1": ["CIS-4.1"],
+      "A.6.2.1": ["CIS-4.2"],
+      "A.6.3.1": ["CIS-14"],
+      "A.7.1.1": ["CIS-1"],
+      "A.8.1.1": ["CIS-5.1"],
+      "A.8.1.4": ["CIS-5.2"],
+      "A.8.2.1": ["CIS-5.3"],
+      "A.8.2.4": ["CIS-5.4"],
+      "A.9.1.1": ["CIS-3"],
+      "A.10.1.1": ["CIS-11"],
+      "A.11.1.1": ["CIS-6"],
+      "A.11.2.1": ["CIS-6"],
+      "A.11.2.5": ["CIS-6.1"],
+      "A.12.1.1": ["CIS-11", "CIS-12"],
+      "A.12.1.3": ["CIS-12"],
+      "A.12.1.4": ["CIS-13"],
+      "A.13.1.1": ["CIS-16"],
+      "A.13.1.3": ["CIS-16.1"],
+      "A.14.1.1": ["CIS-9"]
+    },
+    "CIS_to_NIST_CSF": {
+      "CIS-1": ["ID.RA-1", "ID.RA-2"],
+      "CIS-2": ["ID.AM-1", "ID.AM-2"],
+      "CIS-3": ["PR.DS-1", "PR.DS-2"],
+      "CIS-4": ["PR.AC-1", "PR.AC-3"],
+      "CIS-5": ["PR.AC-1", "PR.AC-2"],
+      "CIS-6": ["DE.AE-1", "DE.AE-2", "DE.CM-1"],
+      "CIS-7": ["PR.PT-1"],
+      "CIS-8": ["PR.PT-3"],
+      "CIS-9": ["PR.IP-1"],
+      "CIS-10": ["RC.RP-1"],
+      "CIS-11": ["PR.PT-2", "PR.PT-3"],
+      "CIS-12": ["PR.PT-3", "PR.PT-4"],
+      "CIS-13": ["DE.AE-1", "DE.CM-1"],
+      "CIS-14": ["PR.AT-1"],
+      "CIS-16": ["PR.IP-1", "PR.IP-3"],
+      "CIS-17": ["RC.IM-1"],
+      "CIS-18": ["PR.IP-2"],
+      "CIS-19": ["DE.TM-1"],
+      "CIS-20": ["RC.CO-1"]
+    },
+    "ISO27001_to_NIST_CSF": {
+      "A.5.1.1": ["GV.AT-01"],
+      "A.6.1.1": ["ID.RA-1"],
+      "A.6.3.1": ["PR.AT-1"],
+      "A.7.1.1": ["ID.AM-1"],
+      "A.8.1.1": ["PR.AC-1"],
+      "A.8.2.1": ["PR.AC-2"],
+      "A.9.1.1": ["PR.DS-1"],
+      "A.11.1.1": ["DE.AE-1"],
+      "A.11.2.1": ["DE.CM-1"],
+      "A.12.1.1": ["PR.PT-1"],
+      "A.13.1.1": ["PR.IP-1"],
+      "A.14.1.1": ["PR.IP-1"]
+    },
+    "ISO42001_to_ISO27001": {
+      "5.1": ["A.5.1.1", "A.5.1.2"],
+      "5.2": ["A.5.1.1", "A.8.1.1"],
+      "5.3": ["A.6.3.1"],
+      "6.1": ["A.5.1.1"],
+      "6.2": ["A.8.1.1", "A.8.2.1"],
+      "7.1": ["A.13.1.1"],
+      "7.2": ["A.13.1.1", "A.13.2.1"],
+      "8.1": ["A.11.2.1"],
+      "8.2": ["A.11.1.1"],
+      "8.3": ["A.10.1.1"]
+    },
+    "RMF_to_NIST_CSF": {
+      "Preparation": ["ID", "GV"],
+      "Categorization": ["ID"],
+      "Selection": ["PR"],
+      "Implementation": ["PR"],
+      "Assessment": ["ID", "PR"],
+      "Authorization": ["ID"],
+      "Monitoring": ["DE"]
+    }
+  },
+  "tech_layer_coverage": {
+    "infrastructure": {
+      "ISO27001": ["A.10.1", "A.12.1", "A.12.2"],
+      "CIS": ["CIS-1", "CIS-4", "CIS-11", "CIS-12", "CIS-13"],
+      "NIST_CSF": ["ID.BE-1", "PR.PT-1", "PR.PT-2"],
+      "coverage_percentage": 85
+    },
+    "platform": {
+      "ISO27001": ["A.6.1", "A.6.2", "A.8.1", "A.8.2"],
+      "CIS": ["CIS-2", "CIS-4", "CIS-5", "CIS-8"],
+      "NIST_CSF": ["PR.AC-1", "PR.AC-2", "PR.AT-1"],
+      "coverage_percentage": 90
+    },
+    "application": {
+      "ISO27001": ["A.13.1", "A.13.2", "A.14.1"],
+      "CIS": ["CIS-3", "CIS-7", "CIS-16"],
+      "NIST_CSF": ["PR.IP-1", "PR.IP-3", "PR.DS-1"],
+      "coverage_percentage": 88
+    },
+    "data": {
+      "ISO27001": ["A.9.1", "A.9.2"],
+      "CIS": ["CIS-3", "CIS-10"],
+      "NIST_CSF": ["PR.DS-1", "PR.DS-2", "RC.RP-1"],
+      "coverage_percentage": 82
+    }
+  },
+  "framework_alignment_matrix": {
+    "rows": [
+      "ISO 27001:2022",
+      "CIS Critical Controls v8.1",
+      "NIST Cybersecurity Framework",
+      "ISO 42001",
+      "RMF 100",
+      "CISA Directives"
+    ],
+    "columns": [
+      "Access Control",
+      "Asset Management",
+      "Threat Intelligence",
+      "Incident Response",
+      "Compliance Assessment",
+      "Cryptography",
+      "Audit & Logging"
+    ],
+    "alignment_score": 0.87
+  },
+  "implementation_priority": [
+    {
+      "priority": 1,
+      "controls": ["CIS-1", "CIS-5", "CIS-6", "A.5.1.1", "A.8.1.1"],
+      "reason": "Critical for baseline security",
+      "timeline": "immediate"
+    },
+    {
+      "priority": 2,
+      "controls": ["CIS-3", "CIS-4", "A.9.1.1", "A.11.1.1"],
+      "reason": "High impact on security posture",
+      "timeline": "30 days"
+    },
+    {
+      "priority": 3,
+      "controls": ["CIS-7", "CIS-9", "A.6.3.1", "A.14.1.1"],
+      "reason": "Medium priority security controls",
+      "timeline": "90 days"
+    }
+  ]
+}
