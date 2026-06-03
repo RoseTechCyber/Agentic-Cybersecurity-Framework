@@ -1,0 +1,311 @@
+{
+  "framework": "CIS Critical Controls",
+  "version": "8.1",
+  "description": "CIS Critical Controls - Safeguards to defend against cyber attacks",
+  "total_controls": 20,
+  "implementation_groups": 3,
+  "controls": {
+    "CIS-1": {
+      "id": "CIS-1",
+      "number": 1,
+      "title": "Inventory and Control of Enterprise Assets",
+      "description": "Actively manage all hardware devices and software assets connected to the network so that only authorized devices are given access and unauthorized and unmanaged devices are found and isolated.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform"],
+      "iso27001_mapping": ["A.7.1.1"],
+      "nist_csf_mapping": ["ID.RA-1"],
+      "severity": "critical",
+      "subcontrols": [
+        {
+          "id": "1.1",
+          "title": "Establish and Maintain Detailed Asset Inventory",
+          "description": "Establish and maintain an accurate, detailed, and up-to-date inventory of all assets connected to the network"
+        },
+        {
+          "id": "1.2",
+          "title": "Address Unauthorized Assets",
+          "description": "Ensure that a process exists to address unauthorized assets on the network"
+        }
+      ]
+    },
+    "CIS-2": {
+      "id": "CIS-2",
+      "number": 2,
+      "title": "Software Asset Management",
+      "description": "Actively manage all software on enterprise assets using a disciplined processes for discovery, evaluation and decommissioning of software.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["platform", "application"],
+      "iso27001_mapping": ["A.13.1.1"],
+      "severity": "critical"
+    },
+    "CIS-3": {
+      "id": "CIS-3",
+      "number": 3,
+      "title": "Data Protection",
+      "description": "Protect data by implementing and managing appropriate technical, procedural and physical controls.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["application", "data"],
+      "iso27001_mapping": ["A.9.1.1"],
+      "severity": "critical"
+    },
+    "CIS-4": {
+      "id": "CIS-4",
+      "number": 4,
+      "title": "Secure Configuration Management",
+      "description": "Establish and maintain the security configuration of enterprise assets (hardware, software, infrastructure and software-as-a-service) based on industry-supported and documented hardening standards.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform"],
+      "severity": "critical"
+    },
+    "CIS-5": {
+      "id": "CIS-5",
+      "number": 5,
+      "title": "Access Control Management",
+      "description": "Use processes and technology to manage identity, authentication and access (authorization) to cloud and on-premises infrastructure and applications.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["platform", "application"],
+      "iso27001_mapping": ["A.8.1.1", "A.8.2.1"],
+      "severity": "critical"
+    },
+    "CIS-6": {
+      "id": "CIS-6",
+      "number": 6,
+      "title": "Logging and Monitoring",
+      "description": "Collect, manage and analyze audit logs for the activities of users, administrators, systems and other components of the IT environment.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application", "data"],
+      "iso27001_mapping": ["A.11.1.1", "A.11.2.1"],
+      "severity": "critical"
+    },
+    "CIS-7": {
+      "id": "CIS-7",
+      "number": 7,
+      "title": "Email and Web Browser Protections",
+      "description": "Protect against phishing, malicious content, and other web-based threats by implementing technical and process controls on web browsers and email systems.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["application"],
+      "severity": "high"
+    },
+    "CIS-8": {
+      "id": "CIS-8",
+      "number": 8,
+      "title": "Malware Defenses",
+      "description": "Prevent or control the installation, execution, propagation of malicious applications, code or scripts.",
+      "implementation_groups": {
+        "IG1": true,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["platform"],
+      "severity": "high"
+    },
+    "CIS-9": {
+      "id": "CIS-9",
+      "number": 9,
+      "title": "Service Provider Management",
+      "description": "Ensure the confidentiality, integrity and availability of information and systems are protected at service providers.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application", "data"],
+      "severity": "high"
+    },
+    "CIS-10": {
+      "id": "CIS-10",
+      "number": 10,
+      "title": "Data Recovery Capabilities",
+      "description": "Recover the enterprise's information systems to a known effective state after a security event.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["data"],
+      "severity": "high"
+    },
+    "CIS-11": {
+      "id": "CIS-11",
+      "number": 11,
+      "title": "Network Infrastructure Management",
+      "description": "Establish, implement and actively manage network infrastructure to protect enterprise assets.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure"],
+      "severity": "high"
+    },
+    "CIS-12": {
+      "id": "CIS-12",
+      "number": 12,
+      "title": "Boundary Defense",
+      "description": "Detect and prevent unauthorized data exfiltration or misuse of enterprise assets connected to the internet.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure"],
+      "severity": "high"
+    },
+    "CIS-13": {
+      "id": "CIS-13",
+      "number": 13,
+      "title": "Network Monitoring and Defense",
+      "description": "Detect, investigate and respond to security events and incidents on the network.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure"],
+      "severity": "high"
+    },
+    "CIS-14": {
+      "id": "CIS-14",
+      "number": 14,
+      "title": "Security Awareness and Skills Training",
+      "description": "Establish and maintain a program to educate and train all personnel, including those without technical roles.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": true,
+        "IG3": true
+      },
+      "tech_layers": ["platform"],
+      "iso27001_mapping": ["A.6.3.1"],
+      "severity": "high"
+    },
+    "CIS-15": {
+      "id": "CIS-15",
+      "number": 15,
+      "title": "Service and Supportability",
+      "description": "Identify, select and procure tools that support controlled assessment and monitoring of security controls.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform"],
+      "severity": "medium"
+    },
+    "CIS-16": {
+      "id": "CIS-16",
+      "number": 16,
+      "title": "Application Software Security",
+      "description": "Manage the security of information systems applications and web services.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["application"],
+      "iso27001_mapping": ["A.13.1.1"],
+      "severity": "high"
+    },
+    "CIS-17": {
+      "id": "CIS-17",
+      "number": 17,
+      "title": "Incident Response Management",
+      "description": "Establish a program to promptly identify, investigate, internally report on, and respond to security incidents.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application", "data"],
+      "severity": "critical"
+    },
+    "CIS-18": {
+      "id": "CIS-18",
+      "number": 18,
+      "title": "Penetration Testing and Red Team Exercises",
+      "description": "Test the effectiveness of security controls by conducting regular penetration testing.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application"],
+      "severity": "medium"
+    },
+    "CIS-19": {
+      "id": "CIS-19",
+      "number": 19,
+      "title": "Threat Intelligence Program",
+      "description": "Establish a program for continuous threat intelligence gathering and sharing.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application", "data"],
+      "severity": "high"
+    },
+    "CIS-20": {
+      "id": "CIS-20",
+      "number": 20,
+      "title": "Security Orchestration and Response",
+      "description": "Establish a capability to coordinate responses to security events.",
+      "implementation_groups": {
+        "IG1": false,
+        "IG2": false,
+        "IG3": true
+      },
+      "tech_layers": ["infrastructure", "platform", "application"],
+      "severity": "high"
+    }
+  },
+  "implementation_group_definitions": {
+    "IG1": {
+      "name": "Implementation Group 1",
+      "description": "Often referred to as 'foundational', these controls are applicable to all organizations and represent the basic level of security controls that every organization should implement.",
+      "target_organizations": "Small organizations, all organizations"
+    },
+    "IG2": {
+      "name": "Implementation Group 2",
+      "description": "Often referred to as 'intermediate', these controls apply to most organizations with moderate business value and should be implemented by enterprises.",
+      "target_organizations": "Mid-sized organizations, enterprises"
+    },
+    "IG3": {
+      "name": "Implementation Group 3",
+      "description": "Often referred to as 'advanced', these controls should be implemented by organizations with high value data and critical infrastructure.",
+      "target_organizations": "Large enterprises, critical infrastructure, government"
+    }
+  },
+  "control_categories": {
+    "preventive": 12,
+    "detective": 5,
+    "corrective": 3
+  }
+}
