@@ -1,0 +1,10 @@
+# Agents requirements
+
+This file lists Python packages useful for the reasoning agent development.
+
+# Use a minimal set for now; extend as work progresses
+
+llama-cpp-python>=0.1.0
+chromadb
+sentence-transformers
+pytest
