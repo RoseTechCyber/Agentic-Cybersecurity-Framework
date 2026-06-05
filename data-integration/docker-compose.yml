@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  cosmos-emulator:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+    container_name: cosmos-emulator
+    ports:
+      - "8081:8081" # SQL API
+      - "10250:10250"
+    environment:
+      - AZURE_COSMOS_EMULATOR_PARTITION_COUNT=4
+    volumes:
+      - cosmos_data:/opt/cosmosdb/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/_explorer/emulator.pem"]
+      interval: 10s
+      retries: 10
+
+  chroma:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chroma
+    ports:
+      - "8000:8000"
+    environment:
+      - CHROMA_SERVER_HOST=0.0.0.0
+      - CHROMA_SERVER_PORT=8000
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  cosmos_data:
